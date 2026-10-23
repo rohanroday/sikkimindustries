@@ -80,13 +80,31 @@ export default function SiteHeader() {
       <header className="masthead">
         <div className="wrap masthead-row">
           <a className="brand" href="#top" aria-label="Commerce & Industries Department, Government of Sikkim, home">
-            <img src="/img/emblem.webp" width={52} height={48} alt="" />
+            <span className="brand-logos">
+              <img
+                className="brand-emblem"
+                src="/img/emblem-cotton.webp"
+                width={192}
+                height={180}
+                alt="Emblem of the Government of Sikkim"
+              />
+              <span className="brand-divider" aria-hidden="true" />
+              <img
+                className="brand-seal"
+                src="/img/dept-seal.webp"
+                width={200}
+                height={160}
+                alt="Seal of the Commerce & Industries Department"
+              />
+            </span>
             <span className="brand-text" aria-hidden="true">
               <span className="brand-dept">
                 Commerce &amp; Industries<span className="brand-long"> Department</span>
               </span>
               <span className="brand-gov">
-                <span className="brand-short">Department · </span>Government of Sikkim
+                <span className="brand-short">Department · </span>
+                <span className="gov-long">Government</span>
+                <span className="gov-short">Govt.</span> of Sikkim
               </span>
             </span>
           </a>
@@ -115,8 +133,6 @@ export default function SiteHeader() {
               </li>
             </ul>
           </nav>
-
-          <img className="dept-seal" src="/img/dept-logo.webp" width={70} height={56} alt="Seal of the Commerce & Industries Department" />
         </div>
       </header>
     </>

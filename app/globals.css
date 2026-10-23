@@ -338,11 +338,13 @@ p + p { margin-top: 1em; }
   text-decoration: none;
   margin-right: auto;
 }
-.brand img { width: 46px; height: auto; padding: 3px; background: var(--cotton); }
+.brand-logos { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.brand-emblem { width: 50px; height: auto; }
+.brand-divider { width: 1px; align-self: stretch; margin-block: 4px; background: rgba(241, 235, 221, 0.3); }
+.brand-seal { width: 62px; height: auto; filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35)); }
 .brand-text { display: grid; line-height: 1.15; }
 .brand-dept { font: 700 1.125rem/1.15 var(--font-display); }
 .brand-gov { font-size: 0.875rem; color: var(--cotton-3); }
-.dept-seal { width: 60px; height: auto; }
 
 .nav { position: relative; }
 .nav-list { display: flex; gap: 4px; }
@@ -360,7 +362,6 @@ p + p { margin-top: 1em; }
 .nav-toggle { display: none; }
 
 @media (max-width: 1060px) {
-  .dept-seal { display: none; }
 }
 @media (max-width: 900px) {
   .masthead-row { min-height: 64px; gap: 12px; }
@@ -405,7 +406,9 @@ p + p { margin-top: 1em; }
   .nav-list a:active { background-color: var(--black-2); }
 }
 @media (max-width: 420px) {
-  .brand img { width: 36px; }
+  .brand-logos { gap: 8px; }
+  .brand-emblem { width: 34px; }
+  .brand-seal { width: 42px; }
   .brand-dept { font-size: 0.9375rem; }
   .brand-gov { font-size: 0.8125rem; }
   .nav-toggle span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
@@ -1140,4 +1143,29 @@ p + p { margin-top: 1em; }
   .brand-long { display: none; }
   .brand-short { display: inline; }
   .brand-dept { font-size: 1.0625rem; }
+}
+/* Footer: the State emblem and the department seal */
+.footer-logos { display: flex; align-items: center; gap: 18px; margin-bottom: 18px; }
+.footer-logos img:first-child { width: 64px; height: auto; }
+.footer-logos img:last-child { width: 80px; height: auto; }
+/* Phone header: two logos plus a two-line name beside the menu button */
+.gov-short { display: none; }
+@media (max-width: 480px) {
+  .masthead-row { gap: 10px; }
+  .brand { gap: 10px; min-width: 0; }
+  .brand-logos { gap: 7px; }
+  .brand-emblem { width: 32px; }
+  .brand-seal { width: 40px; }
+  .brand-text { min-width: 0; }
+  .brand-dept { font-size: 0.9375rem; white-space: nowrap; }
+  .brand-gov { font-size: 0.75rem; white-space: nowrap; }
+  .gov-long { display: none; }
+  .gov-short { display: inline; }
+  .nav-toggle { padding: 8px 12px; }
+}
+@media (max-width: 350px) {
+  .brand-divider { display: none; }
+  .brand-emblem { width: 28px; }
+  .brand-seal { width: 34px; }
+  .brand-dept { font-size: 0.875rem; }
 }

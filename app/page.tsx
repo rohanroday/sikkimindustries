@@ -386,6 +386,10 @@ export default function Home() {
           </ul>
           <div className="footer-grid">
             <div>
+              <div className="footer-logos">
+                <img src="/img/emblem-cotton.webp" width={192} height={180} alt="Emblem of the Government of Sikkim" loading="lazy" decoding="async" />
+                <img src="/img/dept-seal.webp" width={200} height={160} alt="Seal of the Commerce & Industries Department" loading="lazy" decoding="async" />
+              </div>
               <p className="footer-dept">Commerce &amp; Industries Department</p>
               <p>Government of Sikkim</p>
               <p>{contact.address}</p>
